@@ -1,3 +1,3 @@
 require './logger'
 
-Logger.instance.log_smth"instance"
+Logger.instance.log_smth "instance one"
