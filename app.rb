@@ -2,6 +2,11 @@ class Logger
   def initialize
     @f = File.open "log.txt", 'a'
   end
+
+  def self.instance
+    @@x ||= Logger.new
+  end
+
   def self.say_smth
     puts 'something'
   end
@@ -20,3 +25,4 @@ Logger.say_smth
 log = Logger.new
 log.log_smth "Loren"
 
+Logger.instance.log_smth"instance"
